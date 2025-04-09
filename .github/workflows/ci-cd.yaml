@@ -70,7 +70,7 @@ jobs:
         run: echo "Pretending to deploy image $IMAGE_NAME:$IMAGE_TAG"
 
   notify:
-    name: 📩 Final Status
+    name: 📩 Notify PR
     runs-on: ubuntu-latest
     needs: deploy
     steps:
@@ -78,5 +78,5 @@ jobs:
         uses: marocchino/sticky-pull-request-comment@v2
         with:
           header: deploy-status
-          message: |
-            ✅ CI/CD completed! Image $IMAGE_TAG built, scanned and deployed.
+          message: "✅ CI/CD completed! Image ${{ env.IMAGE_TAG }} built, scanned and deployed."
+
