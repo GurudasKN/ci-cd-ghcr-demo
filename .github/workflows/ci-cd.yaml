@@ -34,6 +34,7 @@ jobs:
       with:
         image-ref: ${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
         format: 'table'
+        severity: 'HIGH,CRITICAL'
         exit-code: '0'
         output: 'trivy-report.txt'
 
