@@ -2,7 +2,7 @@ name: CI/CD Pipeline with Stages
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 env:
   IMAGE_NAME: ghcr.io/${{ github.repository }}
